@@ -14,7 +14,7 @@ You can find installation instructions here: https://softwarequtech.github.io/Si
 
 After you have installed and configured SimulaQron you should also install dependencies in requirements.txt by:
 
-`install -r requirements.txt`
+`pip install -r requirements.txt`
 
 ## Author & Contributor List
 

@@ -1,8 +1,8 @@
 import logging
-from SimulaQron.cqc.pythonLib.cqc import CQCConnection
+from cqc.pythonLib import CQCConnection
+
 
 class GCQCConnection(CQCConnection):
-    
     def sendClassical(self, name, msg, close_after=True):
         if name not in self._classicalConn:
             self.openClassicalChannel(name)
@@ -10,7 +10,7 @@ class GCQCConnection(CQCConnection):
         # Added support for bytes and bytesarray message types
         isDecodable = False
         try:
-            tmp = msg.decode()
+            msg.decode()
             isDecodable = True
         except AttributeError:
             isDecodable = False

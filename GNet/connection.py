@@ -1,23 +1,26 @@
 from .protocol import PrivacyAmpilfiedBB84, NoisyBB84, SimpleBB84, ConnectionRole, ConnectionAbort
 from .chipers import QChiper, AESCipher
 from .gcqc import GCQCConnection
-from SimulaQron.cqc.pythonLib.cqc import qubit
+from cqc.pythonLib import qubit
+
 
 class UnableToConnect(Exception):
     pass
 
+
 def bits_to_num(bits):
     return sum([2**i for i, b in enumerate(bits) if b])
 
+
 def key_to_bytes(key):
     return bytes([bits_to_num(key[i:i+8]) for i in range(len(key)//8)])
+
 
 class GNetConnection():
     max_retries = 10
     key_length = 5
     
     def __init__(self, name, peer, debug=True):
-        #super().__init__(name)
         self._cqc_conn = GCQCConnection(name)
         self._peer = peer
         self.protocol = PrivacyAmpilfiedBB84(self, debug=debug)

@@ -67,7 +67,7 @@ class GNetConnection():
         # number of the qbits to use
         N = self.protocol.get_qbits_length_from_key_length(self.key_length)
         
-        self.log("establising a key with ", N, " qubits")
+        self.log("establishing a key with ", N, " qubits")
         
         retries = 0
         while self.max_retries > retries:
@@ -99,7 +99,7 @@ class GNetConnection():
         # number of the qbits to use
         N = self.protocol.get_qbits_length_from_key_length(self.key_length)
         
-        self.log("establising a key with ", N, " qubits")
+        self.log("establishing a key with ", N, " qubits")
         
         retries = 0
         while self.max_retries > retries:

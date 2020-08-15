@@ -64,7 +64,7 @@ class SimpleBB84(QKDProtocol):
             bits = self.get_bits_from_qubits(N, bases)
             self._conn.sendAck()
         
-        self.log("random bits hsve been choosen")
+        self.log("random bits have been chosen")
         
         # exchange bases
         if role is ConnectionRole.Sender:
@@ -107,7 +107,7 @@ class SimpleBB84(QKDProtocol):
         
         key_bits = [bits[i] for i in common_rounds if i not in test_bit_indexes]
 
-        self.log("coomon round where", len(common_rounds))
+        self.log("common round where", len(common_rounds))
         self.log(len(test_bit_indexes), "of them used for tests")
         self.log("remaining key is", len(key_bits), "bits long")
 

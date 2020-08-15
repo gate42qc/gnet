@@ -11,7 +11,7 @@ with GNetConnection("Alice", "Bob") as conn:
             if message == "":
                 break
         else:
-            print("Recieved from Bob: ", message)
+            print("Received from Bob: ", message)
             if message is None:
                 break
         

@@ -1,4 +1,4 @@
-numpy==1.14.6
+numpy==1.22.0
 pycrypto==2.6.1
 cqc==3.2.3
 simulaqron==3.0.15
